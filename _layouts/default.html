@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   {% include head.html %}
+<body>
+<div class="soft-transition"></div>
+<!-- end soft-transition -->
+<div class="transition-overlay"></div>
+<!-- end transition-overlay -->
+<main>
+  {% include aside.html %}
+  <!-- end side-box -->
+  {% include header.html %}
+  
+  {{ content }}
+  <!--<div class="application"> <img src="{{ site.baseurl }}/images/app-mockup.jpg" alt="Image"> </div>
+  -->{% include footer.html %}
+</main>
 
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+<!-- JS FILES --> 
+<script src="{{ site.baseurl }}/js/jquery.min.js"></script> 
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script> 
+<script src="{{ site.baseurl }}/js/bootstrap-select.js"></script> 
+<script src="{{ site.baseurl }}/js/bootstrap-datepicker.js"></script> 
+<script src="{{ site.baseurl }}/js/jquery.counterup.min.js"></script> 
+<script src="{{ site.baseurl }}/js/jquery.stellar.js"></script> 
+<script src="{{ site.baseurl }}/js/jquery.validate.min.js"></script> 
+<script src="{{ site.baseurl }}/js/jquery.form.js"></script> 
+<script src="{{ site.baseurl }}/js/contact-form.js"></script> 
+<script src="{{ site.baseurl }}/js/jquery.fancybox.js"></script> <script src="{{ site.baseurl }}/js/waypoints.min.js"></script> 
+<script src="{{ site.baseurl }}/js/slick.js"></script> 
+<script src="{{ site.baseurl }}/js/masonry.min.js"></script> 
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+</body>
 </html>
