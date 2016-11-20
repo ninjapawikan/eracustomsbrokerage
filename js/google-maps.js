@@ -1,4 +1,5 @@
-
+---
+---
 var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
       ['Coogee Beach', -33.923036, 151.259052, 5],
@@ -28,7 +29,7 @@ var locations = [
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
-		icon: 'images/map-pin.png'
+		icon: '{{ site.baseurl }}/images/map-pin.png'
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
