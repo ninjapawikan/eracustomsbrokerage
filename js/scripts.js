@@ -119,7 +119,7 @@ $(document).ready(function() {
 		$('#importProcessingFee').text(importProcessingFee.formatMoney(2, '.', ','));
 		$('#totalTaxesAndDuties').text(totalTaxesAndDuties.formatMoney(2, '.', ','));
 		$('#dutyHandlingFee').text(dutyHandlingFee.formatMoney(2, '.', ','));
-		$('#informalEntryDec').text(informalEntryDec)
+		$('#informalEntryDec').text(informalEntryDec.formatMoney(2, '.', ','));
 		$('#storageFee').text(storageFee.formatMoney(2, '.', ','));
 		$('#collectorsClearance').text(collectorsClearance.formatMoney(2, '.', ','));
 		$('#totalFees').text(totalFees);
