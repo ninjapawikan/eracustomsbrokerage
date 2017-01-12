@@ -88,56 +88,51 @@ layout: default
           <form>
             <div class="row">
               <div class="col-md-6 col-sm-6">
-                <div class="form-group radio-field">
-                  <label>Distance</label>
-                  <span class="holder">
-                  <input type="radio" checked>
-                  Domestic</span> <span class="holder">
-                  <input type="radio">
-                  International</span> </div>
-                <!-- end form-group -->
                 <div class="form-group">
-                  <label>Weight</label>
-                  <input type="text">
-                </div>
-                <!-- end form-group -->
-                <div class="form-group size-field">
-                  <label>Cargo Size</label>
-                  <input type="text" placeholder="cm">
-                  <span>x</span>
-                  <input type="text" placeholder="cm">
-                </div>
-                <!-- end form-group -->
-                
-                <div class="form-group">
-                  <label>Fragile</label>
+                  <label>Origin</label>
                   <select class="selectpicker">
-                    <option>YES</option>
-                    <option>NO</option>
+                    <option>China</option>
+                    <option>USA</option>
+                    <option>Hongkong</option>
+                    <option>UK</option>
                   </select>
                 </div>
-                <!-- end form-group --> 
+                <div class="form-group">
+                  <label>Product Desciption</label>
+                  <input type="text" placeholder="for example: 304.5E2 XTC CAT Excavator">
+                </div>
+                <div class="form-group">
+                  <label>Category</label>
+                  <select class="selectpicker">
+                    <option>Electronic equipment</option>
+                    <option>Oil</option>
+                    <option>Machines, engines, pumps</option>
+                    <option>Vehicles</option>
+                    <option>Plastics</option>
+                    <option>Iron and steel</option>
+                    <option>Cereals</option>
+                    <option>Aircraft, spacecraft</option>
+                    <option>Pharmaceuticals</option>
+                    <option>Food waste, animal fodder</option>
+                  </select>
+                </div>
               </div>
-              <!-- col-6 -->
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <label>Extra Services</label>
-                  <span class="full-block">
-                  <input type="checkbox" checked>
-                  Quick Delivery</span> <span class="full-block">
-                  <input type="checkbox">
-                  Warranty</span> <span class="full-block">
-                  <input type="checkbox">
-                  Gift Box</span> </div>
-                <!-- end form-group -->
-                <div class="form-group"> <small>The Field below will show the double of the number about Php</small> </div>
-                <!-- end form-group -->
+                  <label>Actual Value</label>
+                  <input id="inActualVal" type="text" placeholder="$10000">
+                </div>
                 <div class="form-group">
-                  <input type="text" value="Php200" disabled>
+                  <label>Freight Cost</label>
+                  <input id="inFreightCost" type="text" placeholder="$1000">
+                </div>
+                <div class="form-group">
+                  <label>Insurance Cost</label>
+                  <input id="inInsuranceCost" type="text" placeholder="$200">
                 </div>
                 <!-- end form-group -->
                 <div class="form-group">
-                  <button type="submit">CALCULATE</button>
+                  <button id="calculateBtn" type="button" >CALCULATE</button>
                 </div>
                 <!-- end form-group --> 
               </div>
@@ -342,3 +337,41 @@ layout: default
     </div>
     <!-- end left-side --> 
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="computation" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sample Estimate</h4>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Customs Duty</td><td id="customsDuty"></td></tr>
+              <tr><td>Value Added Tax</td><td id="vat"></td></tr>
+              <tr><td>Excise Tax</td><td id="exciseTax"></td></tr>
+              <tr><td>Import Processing Fee</td><td id="importProcessingFee"></td></tr>
+              <tr><td>Total Duties & Taxes</td><td id="totalTaxesAndDuties"></td></tr>
+              <tr><td>Duty Handling Fee</td><td id="totalTaxesAndDuties"></td></tr>
+              <tr><td>Informal Entry Declaration</td><td id="informalEntryDec"></td></tr>
+              <tr><td>Storage Fee</td><td id="storageFee"></td></tr>
+              <tr><td>Collectors Clearance</td><td id="collectorsClearance"></td></tr>
+              <tr class="success"><td>Total Fees</td><td id="totalFees"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Contact</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
